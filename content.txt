@@ -7,3 +7,7 @@
       >code reusability
       >debugging
       >easy to colab
+5. End to end project
+     >encapsulation
+     >getter and setter
+     >static method
