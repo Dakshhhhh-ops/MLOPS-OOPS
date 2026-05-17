@@ -14,9 +14,9 @@ class chatbook:
         elif user_input=='2':
             self.signin()
         elif user_input=='3':
-            pass
+            self.write_post()
         elif user_input=='4':
-            pass
+            self.message_friend()
         else:
             exit()
 
@@ -44,6 +44,23 @@ class chatbook:
                 self.menu()
         print("\n")
         self.menu() #after signin, we are calling the menu method again to allow the user to select other options like write a post or message a friend
+    
+    def write_post(self):
+        if self.loggedin:
+            post_content=input("Enter here")
+            print(f"your post: {post_content} has been published")
+        else:
+            print("please signin to write a post")
+            self.menu()
+
+    def message_friend(self):
+        if self.loggedin:
+            friend_name=input("enter your friend's name")
+            message_content=input("enter your message")
+            print(f"your message: {message_content} has been sent to {friend_name}")
+        else:
+            print("please signin to message a friend")
+            self.menu()
 
     
 
