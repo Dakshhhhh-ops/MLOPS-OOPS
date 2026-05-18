@@ -1,10 +1,21 @@
 class chatbook:
+    
+    __user_id=0 #class variable, shared by all instances of the class
     def __init__(self):
+        self.id=chatbook.__user_id #instance variable, unique to each instance of the class
+        chatbook.__user_id+=1 #incrementing the class variable to assign unique user ids to each instance of the class
+        self.__name='Default User' #private attribute, can only be accessed within the class
         self.username=''
         self.password=''
         self.loggedin=False
-        self.menu()
+        #self.menu())
+    
 
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self, value):
+        self.__name=value
 
     def menu(self):
         user_input=input("welcome to chatbook, please select an option: 1. signup 2. signin 3. write a post 4. message a friend 5. exit")

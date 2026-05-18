@@ -8,6 +8,10 @@
       >debugging
       >easy to colab
 5. End to end project
+     >function vs method
+     >dunder methods
+     >self
+     >you can create ttribute outside class as well
      >encapsulation
      >getter and setter
      >static method
